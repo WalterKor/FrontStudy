@@ -1,0 +1,27 @@
+body, html{
+  margin: 0;
+}
+.container{
+
+  /* 컨테이너 가로 세배 */
+  width: 100vw; 
+
+  /* 세로컨테이너 한배 */
+  height: 300vh;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.inner{
+  width: 100vw;
+  background-position: center;
+  
+}
+.inner img{
+  width: 100%;
+}
+
+.toggle{
+  display: flex;
+  justify-content: center;
+}
