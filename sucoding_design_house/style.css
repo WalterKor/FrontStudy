@@ -1,0 +1,84 @@
+/*기본 초기화*/
+@font-face {
+    font-family: abster;
+    src: url(./font/abster-webfont.woff) format('woff');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 전체를 컨테이너로 잡는거 */
+
+.container{
+    width: 100%;
+    /* 헤이트는 100%라고 하면 높이를 가질 수 없다. */
+    height: 100vh;
+    /* 이미지 백그라운드에 마스크레이어한거같은 모습 */
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/room.jpg);
+    background-position: center;
+}
+.container .header{
+    width: 80%;
+    height: 80px;
+    /* 수평중앙에 오게하기위해서 margin 0 auto */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /*높이의 80px의 중앙에 배치*/
+    align-items: center;
+}
+.container .header h1 a{
+    text-decoration: none;
+    color: #fff;
+    font-family: abster;   
+}
+.container .nav ul li{
+    /*li태그들을 가로로 정렬하는 팁 */
+    display: inline-block;
+    margin: 0 10px;
+}
+.container .nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container .nav ul li a:hover{
+    color: #1fdfdf;
+}
+
+.container .hero{
+    position: absolute;
+    /*이동했다가*/
+    left: 50%;
+    top: 50%;
+    /*다시 중앙*/
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container .hero h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.container .hero p{
+    font-size: 22px;
+}
+.container .hero button{
+    color: white;
+    /*백그라운드를 none로 지정을 해야 뒤가 날라감*/
+    background: none;
+    border: 2px solid darkseagreen;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+    /* 천천히 변하는거 */
+    transition: all .4s;
+}
+.container .hero button:hover{
+    background-color: darkslategray;
+}
+
